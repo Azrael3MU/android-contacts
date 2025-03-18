@@ -45,10 +45,7 @@ public class ContactUi implements ListDiffInterface<ContactUi> {
     @Override
     public boolean theSameAs(ContactUi other){
         if (other == null) return false;
-        return this.name.equals(other.name) &&
-                this.phone.equals(other.phone) &&
-                this.photo.equals(other.photo) &&
-                this.types.equals(other.types);
+        return this.hashCode() == other.hashCode();
 
     }
 

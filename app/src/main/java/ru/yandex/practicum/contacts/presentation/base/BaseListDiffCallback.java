@@ -10,7 +10,7 @@ public class BaseListDiffCallback<T extends ListDiffInterface<T>> extends DiffUt
     @Override
     public boolean areItemsTheSame(@NonNull T oldItem, @NonNull T newItem) {
         // Проверка на одинаковость элементов, например, сравнение их хеш-кодов
-        return oldItem.hashCode() == newItem.hashCode();
+        return oldItem.theSameAs(newItem);
     }
 
     @Override
